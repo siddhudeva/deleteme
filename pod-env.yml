@@ -9,3 +9,13 @@ spec:
       env:
         - name: URL
           value: foofle.com
+      envFrom:
+        - ConfigMapRef:
+            name: sample-conf
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: sample-conf
+data:
+  URL1: eamplea.com
