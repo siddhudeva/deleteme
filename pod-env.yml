@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample8
+spec:
+  containers:
+    - name: sample8
+      image: nginx
+      env:
+        - name: URL
+          value: foofle.com
