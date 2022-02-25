@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: liveness-exec
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      livenessProbe:
+          httpGet:
+            path: /
+        initialDelaySeconds: 5
+        periodSeconds: 5
